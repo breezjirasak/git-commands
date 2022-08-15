@@ -46,8 +46,8 @@ In this file, directory paths are written with a forward slash as on MacOS, Linu
    ```
 
 3. There are 2 ways to create a local Git repository.  What are they?
-   - todo: briefly describe first way
-   - todo: briefly describe second way
+   - ``` Create a local git repository by initilize (git init) a new directory and add to git. ```
+   - ``` Create a local git repository from existing program by push to git```
 
 4. When you create a git repository by entering `git init`, Git will create a "hidden" directory for the local repository.  Where is the directory for this local repository (relative to the directory where you typed "git init")?
 
@@ -130,23 +130,37 @@ test/
 > TODO: enter the git command to do each of these
 
 1.  Display the differences between your *working copy* of `a.py` and the `a.py` in the *local repository* (HEAD revision):
+   ```
+   
+   ```
 
 2. Display the differences between your *working copy* of `a.py` and the version in the *staging area*. (But, if a.py is not in the staging area this will compare working copy to HEAD revision):
+   ```
+   git diff a.py
+   ```
 
 3. **View changes to be committed:** Display the differences between files in the staging area and the versions in the repository. (You can also specify a file name to compare just one file.) 
-
+   ```
+   
+   ```
 
 4. **Undo "git add":** If `main.py` has been added to the staging area (`git add main.py`), remove it from the staging area:
+   ```
+   git restore --staged main.py
+   ```
 
 
 5. **Recover a file:** Command to replace your working copy of `a.py` with the most recent (HEAD) version in the repository.  This also works if you have deleted your working copy of this file.
+   ```
+   
+   ```
 
 
 6. **Undo a commit:** Suppose you want to discard some commit(s) and move both HEAD and "master" to an earlier revision (an earlier commit)  Suppose the git commit graph looks like this (`aaaa`, etc, are the commit ids)
    ```
    aaaa ---> bbbb ---> cccc ---> dddd [HEAD -> master]
    ``` 
-   The command to reset HEAD and master to the commit id `bbbb`:
+   The command to reset HEAD and master to the commit id `bbbb`: ``` git reset --soft bbbb```
 
 
 7. **Checkout old code:** Using the above example, the command to replace your working copy with the files from commit with id `aaaa`:
